@@ -2,10 +2,8 @@
   background: #1a202c;
   color: white;
   padding: 3rem 0 1rem;
-  position: absolute;
-  display: block;
   width: 100%;
-  margin: auto;
+  margin: 0;
 }
 
 .footer-container {
@@ -57,7 +55,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: #3b82f6;
+  color: #f59e0b;
 }
 
 .footer-social {
@@ -79,7 +77,7 @@
 }
 
 .footer-social a:hover {
-  background: #3b82f6;
+  background: linear-gradient(135deg, #1e3a8a, #f59e0b);
   color: white;
   transform: translateY(-2px);
 }
