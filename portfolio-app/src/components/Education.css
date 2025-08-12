@@ -9,6 +9,14 @@
   padding: 0 2rem;
 }
 
+.section-header{
+  margin-bottom: 15px;
+}
+
+.section-title, .section-subtitle{
+  text-align: center;
+}
+
 .education-timeline {
   position: relative;
   padding: 2rem 0;

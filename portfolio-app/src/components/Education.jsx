@@ -15,13 +15,6 @@ const Education = () => {
       school: "ENI Fianarantsoa",
       period: "2021 - 2024",
       status: "Diplômé"
-    },
-    {
-      degree: "Baccalauréat Série C",
-      field: "Sciences Mathématiques",
-      school: "Saint Gabriel Mahajanga",
-      period: "2020",
-      status: "Diplômé"
     }
   ];
 
@@ -29,7 +22,7 @@ const Education = () => {
     <section className="education" id="education">
       <div className="education-container">
         <div className="section-header">
-          <h2 className="section-title">Formation</h2>
+          <h2 className="section-title">Formation Académique</h2>
           <p className="section-subtitle">
             Mon parcours académique en administration système et réseau
           </p>
