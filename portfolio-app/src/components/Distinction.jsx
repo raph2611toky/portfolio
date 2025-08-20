@@ -35,7 +35,7 @@ const Distinctions = () => {
       theme: "Application santé sexuelle",
       position: "1ère place",
       description: "Création d'une application mobile innovante pour l'éducation et la sensibilisation en santé sexuelle.",
-      link: "#",
+      link: "https://www.facebook.com/share/p/1APWm9DEMe/",
       type: "mobile"
     },
     {
