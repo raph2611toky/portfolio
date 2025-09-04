@@ -3,12 +3,12 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: "Application Desktop Agence de Voyage",
-      description: "Application desktop complète développée avec Qt pour la gestion d'une agence de voyage avec interface utilisateur moderne.",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=500",
-      technologies: ["Qt", "C++", "Interface Graphique", "Base de Données"],
-      link: "#",
-      github: "#"
+      title: "Application de Streaming Multimédia",
+      description: "Plateforme de streaming développée avec React.js (Vite) pour le frontend et Django pour le backend. L’application permet de regarder des vidéos avec un contrôle avancé du flux : gestion de la qualité, vitesse de lecture, sous-titres, suivi de la langue, segmentation des vidéos et réglage du volume. Interface utilisateur moderne et performante.",
+      image: "https://images.pexels.com/photos/4009401/pexels-photo-4009401.jpeg?auto=compress&cs=tinysrgb&w=500",
+      technologies: ["React.js (Vite)", "Django", "Streaming", "Contrôle de flux", "Sous-titres"],
+      link: "https://github.com/raph2611toky/prog-res-frontend.git",
+      github: "https://github.com/raph2611toky/prog-res-frontend.git"
     },
     {
       title: "Surveillance Système Windows",
