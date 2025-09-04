@@ -10,7 +10,7 @@ const Hero = () => {
               Bonjour, je suis <span className="highlight">Nandrasana Toky</span>
             </h1>
             <p className="hero-subtitle">
-              Administrateur Système et Réseau spécialisé en sécurité informatique
+              Professionnel en Systèmes et Réseaux, Développement Fullstack et DevOps
             </p>
             <p className="hero-description">
               Je sécurise et administre les infrastructures IT avec une expertise en réseaux, 
@@ -33,11 +33,12 @@ const Hero = () => {
           </div>
           <div className="hero-image">
             <div className="profile-placeholder">
-              <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+            <img src="/profile.png" alt="Mon profil" className="profile-img" />
+              {/* <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
                 <circle cx="100" cy="100" r="100" fill="#f3f4f6"/>
                 <circle cx="100" cy="80" r="30" fill="#d1d5db"/>
                 <path d="M40 180c0-33.137 26.863-60 60-60s60 26.863 60 60" fill="#d1d5db"/>
-              </svg>
+              </svg> */}
             </div>
           </div>
         </div>

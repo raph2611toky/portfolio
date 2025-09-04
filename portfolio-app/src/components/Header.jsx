@@ -25,12 +25,12 @@ const Header = () => {
         
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
-            <li><button onClick={() => scrollToSection('experience')}>Expérience</button></li>
-            <li><button onClick={() => scrollToSection('skills')}>Compétences</button></li>
-            <li><button onClick={() => scrollToSection('projects')}>Projets</button></li>
-            <li><button onClick={() => scrollToSection('education')}>Formation</button></li>
-            <li><button onClick={() => scrollToSection('distinction')}>Distinction</button></li>
-            <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
+            <li><button className='nav-item-button' onClick={() => scrollToSection('experience')}>Expérience</button></li>
+            <li><button className='nav-item-button' onClick={() => scrollToSection('skills')}>Compétences</button></li>
+            <li><button className='nav-item-button' onClick={() => scrollToSection('projects')}>Projets</button></li>
+            <li><button className='nav-item-button' onClick={() => scrollToSection('education')}>Formation</button></li>
+            <li><button className='nav-item-button' onClick={() => scrollToSection('distinction')}>Distinction</button></li>
+            <li><button className='nav-item-button' onClick={() => scrollToSection('contact')}>Contact</button></li>
           </ul>
         </nav>
 
