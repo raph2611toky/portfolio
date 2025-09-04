@@ -28,13 +28,13 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "Développeur backend et Devops",
-      company: "Diofèvre",
-      type: "CDI",
+      title: "Développeur backend et DevSeOps",
+      company: "Diofèvre ",
+      type: "télétravail",
       period: "mars 2025 - juillet 2025",
       location: "Fianarantsoa",
       description:
-        "Contribution au développement backend et à l'optimisation des processus DevOps, incluant la sécurisation et le déploiement d'applications web.",
+        "Contribution au développement backend et à l'automation des déploiements et la sécurisation d'applications web.",
       technologies: [],
       images: [],
     },
@@ -45,7 +45,7 @@ const Experience = () => {
       period: "Septembre 2024 - février 2024",
       location: "Fianarantsoa",
       description:
-        "Contribution au développement backend et à l'optimisation des processus DevOps, incluant la sécurisation et le déploiement d'applications web.",
+        "Développement backend et responsable de l'optimisation des processus DevSecOps des applications web.",
       technologies: [],
       images: [],
     },
@@ -92,9 +92,9 @@ const Experience = () => {
   return (
     <section className={`experience ${isVisible ? "animate-in" : ""}`} id="experience">
       <div className="experience-container">
-        <div className="section-header slide-in-right">
+        {/* <div className="section-header slide-in-right">
           <h2 className="section-title">Mon Expérience Professionnelle</h2>
-        </div>
+        </div> */}
 
         <div className="timeline">
           {experiences.map((exp, index) => (

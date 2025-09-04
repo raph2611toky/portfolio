@@ -250,7 +250,7 @@ const Distinctions = () => {
       <div className="distinctions-container">
         <div className="section-header">
           <h2 className="section-title">Mes Distinctions</h2>
-          <p className="section-subtitle">Participations et réussites dans les compétitions technologiques</p>
+          {/* <p className="section-subtitle">Participations et réussites dans les compétitions technologiques</p> */}
         </div>
 
         <div className="distinctions-grid">

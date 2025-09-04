@@ -28,8 +28,8 @@ const Footer = () => {
             <h4>Contact</h4>
             <ul>
               <li>tokynandrasana2611@gmail.com</li>
-              <li>+261 38 47 023 93</li>
-              <li>Fianarantsoa, Madagascar</li>
+              <li>+261 38 28 568 44</li>
+              {/* <li>Fianarantsoa, Madagascar</li> */}
             </ul>
           </div>
           

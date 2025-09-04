@@ -57,11 +57,11 @@ const Contact = () => {
               </div>
               <div>
                 <h3>Téléphone</h3>
-                <p>+261 38 47 023 93</p>
+                <p>+261 38 28 568 44</p>
               </div>
             </div>
             
-            <div className="contact-item">
+            {/* <div className="contact-item">
               <div className="contact-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -72,7 +72,7 @@ const Contact = () => {
                 <h3>Localisation</h3>
                 <p>Fianarantsoa, Madagascar</p>
               </div>
-            </div>
+            </div> */}
             
             <div className="social-links">
               <h3>Suivez-moi</h3>
@@ -117,7 +117,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <input
                 type="text"
                 name="subject"
@@ -126,7 +126,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
               />
-            </div>
+            </div> */}
             <div className="form-group">
               <textarea
                 name="message"

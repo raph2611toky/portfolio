@@ -1,12 +1,13 @@
 .experience {
-  padding: 2rem 0;
+  padding: 2rem 0rem;
   background: var(--background-secondary);
+  padding-top: 3.5rem;
 }
 
 .experience-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 /* Added timeline layout instead of grid */
