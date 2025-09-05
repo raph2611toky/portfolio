@@ -37,7 +37,7 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["Mikrotik", "Python", "MySQL", "Django"],
       link: "#",
-      github: "",
+      github: "https://github.com/raph2611toky/wifi_zone_area.git",
     },
     {
       title: "Application de Streaming Multimédia",
@@ -46,7 +46,7 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/4009401/pexels-photo-4009401.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["React.js (Vite)", "Django", "Python", "Contrôle de flux", "Sous-titres"],
       link: "#",
-      github: "",
+      github: "https://github.com/raph2611toky/streaming.git",
     },
     {
       title: "Sexual AI",
@@ -55,7 +55,7 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/3184297/pexels-photo-3184297.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["Python", "React.js (Vite)", "NLP", "Django"],
       link: "#",
-      github: "",
+      github: "https://github.com/raph2611toky/sexual-ai.git",
     },
 
     {
@@ -65,14 +65,14 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["Django", "Télésurveillance", "Certification", "E-learning"],
       link: "#",
-      github: "",
+      github: "https://github.com/raph2611toky/lms_quebec.git",
     },
     {
       title: "Applicant Tracking System - ATS",
       description:
         "API REST de recherche d'emploi automatique en ligne qui, à partir de recherches personnalisées, combine toutes les recherches dans les sites d'emploi (LinkedIn, Jooble, etc.) agissant comme un agent pour plus d'efficacité et de rapidité. Système intelligent d'agrégation d'offres d'emploi avec matching automatique.",
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=500",
-      technologies: ["Python", "Web Scraping", "API LinkedIn", "Machine Learning", "Django"],
+      technologies: ["Javascript", "Web Scraping", "Node.js"],
       link: "#",
       github: "",
     },
@@ -92,7 +92,7 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["Vue.js", "Laravel", "Géolocalisation", "Gamification", "Écologie"],
       link: "#",
-      github: "",
+      github: "https://github.com/raph2611toky/cite_d_ame_verte.git",
     },
     {
       title: "Forum de Partage",
@@ -101,7 +101,7 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["PHP", "MySQL", "JavaScript", "Modération IA", "Markdown"],
       link: "#",
-      github: "",
+      github: "https://github.com/raph2611toky/forum_de_partage.git",
     },
     {
       title: "Gestion de Stock",
@@ -110,7 +110,7 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=500",
       technologies: ["Laravel", "MySQL", "Chart.js", "Codes-barres", "Analytics"],
       link: "#",
-      github: "",
+      github: "https://github.com/raph2611toky/gestion_de_stocke.git",
     },
   ]
 
