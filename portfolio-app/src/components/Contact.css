@@ -1,6 +1,8 @@
 .contact {
-  padding: 6rem 0;
-  background: white;
+  padding: 3rem 0; /* Reduced from 6rem to 3rem to minimize white space */
+  background: var(--background-primary);
+  opacity: 1; /* Ensure contact section is always visible */
+  transform: none; /* Remove any transform that might hide content */
 }
 
 .contact-container {
@@ -27,20 +29,20 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  background: #f8fafc;
+  background: var(--background-secondary);
   border-radius: 1rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
 .contact-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px var(--shadow-light);
 }
 
 .contact-icon {
-  background: #3b82f6;
-  color: white;
+  background: var(--primary-color);
+  color: var(--background-primary);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -53,26 +55,26 @@
 .contact-item h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1a202c;
+  color: var(--text-primary);
   margin: 0 0 0.25rem 0;
 }
 
 .contact-item p {
-  color: #4a5568;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 .social-links {
   padding: 1.5rem;
-  background: #f8fafc;
+  background: var(--background-secondary);
   border-radius: 1rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
 }
 
 .social-links h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1a202c;
+  color: var(--text-primary);
   margin: 0 0 1rem 0;
 }
 
@@ -82,8 +84,8 @@
 }
 
 .social-link {
-  background: white;
-  color: #4a5568;
+  background: var(--background-primary);
+  color: var(--text-secondary);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -91,21 +93,21 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: #3b82f6;
-  color: white;
+  background: var(--primary-color);
+  color: var(--background-primary);
   transform: translateY(-2px);
 }
 
 .contact-form {
-  background: #f8fafc;
+  background: var(--background-secondary);
   padding: 2.5rem;
   border-radius: 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -116,19 +118,20 @@
 .form-group textarea {
   width: 100%;
   padding: 1rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
   border-radius: 0.75rem;
   font-size: 1rem;
-  background: white;
+  background: var(--background-primary);
   transition: all 0.3s ease;
   font-family: inherit;
+  color: var(--text-primary);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--shadow-light);
 }
 
 .form-group textarea {
@@ -139,8 +142,8 @@
 .submit-btn {
   width: 100%;
   padding: 1rem 2rem;
-  background: #3b82f6;
-  color: white;
+  background: var(--primary-color);
+  color: var(--background-primary);
   border: none;
   border-radius: 0.75rem;
   font-size: 1rem;
@@ -150,9 +153,43 @@
 }
 
 .submit-btn:hover {
-  background: #2563eb;
+  background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+/* Simplified animations to prevent visibility issues */
+.animate-on-scroll {
+  opacity: 1; /* Start visible instead of hidden */
+  transform: translateY(0); /* Start in normal position */
+  transition: all 0.3s ease-out; /* Reduced transition time */
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 1; /* Start visible */
+  transform: translateX(0); /* Start in normal position */
+  transition: all 0.3s ease-out; /* Reduced transition time */
+}
+
+.slide-in-left.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 1; /* Start visible */
+  transform: translateX(0); /* Start in normal position */
+  transition: all 0.3s ease-out; /* Reduced transition time */
+}
+
+.slide-in-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @media (max-width: 768px) {

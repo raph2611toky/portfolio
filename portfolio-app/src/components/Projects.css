@@ -1,6 +1,6 @@
 .projects {
   padding: 6rem 0;
-  background: #f8fafc;
+  background: var(--background-secondary);
 }
 
 .projects-container {
@@ -11,23 +11,64 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
+  min-height: 600px;
+}
+
+/* Added single-row class for dynamic pagination when less than 4 projects */
+.projects-grid.single-row {
+  grid-template-rows: 1fr;
+  min-height: 300px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: auto;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pagination-numbers {
+    order: -1;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
 }
 
 .project-card {
-  background: white;
+  background: var(--background-primary);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
-  animation: fadeInUp 0.6s ease-out;
+  /* Removed static animation, added scroll-based animation */
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px var(--shadow-medium);
 }
 
 .project-image {
@@ -53,7 +94,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(59, 130, 246, 0.9);
+  background: rgba(37, 99, 235, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,8 +112,8 @@
 }
 
 .project-link {
-  background: white;
-  color: #3b82f6;
+  background: var(--background-primary);
+  color: var(--primary-color);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -89,8 +130,8 @@
 }
 
 .project-link:hover {
-  background: #3b82f6;
-  color: white;
+  background: var(--primary-color);
+  color: var(--background-primary);
   transform: scale(1.1);
 }
 
@@ -101,12 +142,12 @@
 .project-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1a202c;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .project-description {
-  color: #4a5568;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -118,13 +159,30 @@
 }
 
 .tech-tag {
-  background: #f1f5f9;
-  color: #475569;
+  background: var(--background-accent);
+  color: var(--text-secondary);
   padding: 0.375rem 0.75rem;
   border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
+}
+
+/* Added scroll-based animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.animate-out {
+  opacity: 0;
+  transform: translateY(-30px);
 }
 
 @keyframes fadeInUp {
@@ -138,16 +196,68 @@
   }
 }
 
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+/* Added pagination styles for projects */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
 
-  .project-content {
-    padding: 1.5rem;
-  }
+.pagination-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--background-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
 
-  .project-title {
-    font-size: 1.25rem;
-  }
+.pagination-btn:hover:not(.disabled) {
+  background: var(--primary-color);
+  color: var(--background-primary);
+  transform: translateY(-2px);
+}
+
+.pagination-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.pagination-number:hover {
+  background: var(--background-accent);
+  transform: translateY(-2px);
+}
+
+.pagination-number.active {
+  background: var(--primary-color);
+  color: var(--background-primary);
+  border-color: var(--primary-color);
 }

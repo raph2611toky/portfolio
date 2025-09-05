@@ -27,42 +27,47 @@ const Skills = () => {
   const skillCategories = [
     {
       id: "admin",
-      title: "Administration des Systèmes et des Réseaux",
+      title: "Administration des Systèmes et Réseaux",
       icon: "🖥️",
       color: "#3b82f6",
       skills: [
-        "Configuration serveurs Linux/Windows",
-        "Gestion des pare-feu et IDS/IPS", 
-        "LDAP et Active Directory",
-        "Monitoring réseau (Nagios, Zabbix)",
-        "Haute disponibilité et clustering",
-        "Architectures réseau sécurisées",
+        "Gestion avancée des pare-feu (pfSense, Fortinet, Palo Alto)",
+        "Détection & prévention d’intrusions (Snort, Suricata, Zeek)",
+        "Monitoring & centralisation des logs (ELK, Wazuh, Graylog)",
+        "SIEM d’entreprise (Splunk, AlienVault, QRadar)",
+        "Orchestration de la réponse (SOAR : TheHive, Cortex, Shuffle)",
+        "Threat Hunting & analyse forensique (Volatility, MISP, YARA)",
+        "Haute disponibilité & sécurité réseau (Clustering, VPN, Zero Trust)",
       ],
     },
     {
       id: "devops",
-      title: "DevOps & Sécurisation",
-      icon: "🔒",
+      title: "DevOps, Cloud & Sécurité",
+      icon: "⚙️",
+      color: "#10b981",
       skills: [
-        "Docker, Kubernetes",
-        "Git, GitHub, GitLab",
-        "Jenkins CI/CD",
-        "SIEM surveillance temps réel",
-        "Cloud (AWS, Azure, Google Cloud)",
-        "Analyse des vulnérabilités",
+        "Containers & orchestration (Docker, Kubernetes, OpenShift)",
+        "CI/CD & automatisation (Jenkins, GitLab CI, ArgoCD)",
+        "Infrastructure as Code (Terraform, Ansible, Helm)",
+        "Cloud computing & services managés (AWS, Azure, GCP)",
+        "Observabilité & logs centralisés (Prometheus, Grafana, ELK)",
+        "Sécurité & gestion des vulnérabilités (Nmap, Nessus, OpenVAS)",
+        "Zero Trust & gestion des accès (Vault, IAM, SSO, MFA)",
       ],
     },
     {
       id: "dev",
-      title: "Développement",
+      title: "Développement Logiciel",
       icon: "💻",
+      color: "#f59e0b",
       skills: [
-        "Frameworks : Django, Laravel, Node.js",
-        "SGBD : MySQL, PostgreSQL, MongoDB",
-        "API : REST, GraphQL",
-        "Applications web et mobile",
-        "Applications desktop avec QT",
-        "Tests de vulnérabilité",
+        "Développement backend robuste (Django, Node.js, Laravel)",
+        "Frontend moderne & réactif (React, Vue.js, TailwindCSS)",
+        "Bases de données SQL & NoSQL (MySQL, PostgreSQL, MongoDB)",
+        "Conception et intégration d’API sécurisées (REST, GraphQL)",
+        "Applications multiplateformes (Web, Mobile, Desktop avec Flutter/Qt)",
+        "Tests automatisés & sécurité applicative (JUnit, PyTest, OWASP)",
+        "Collaboration & gestion de versions (Git, GitHub, GitLab)",
       ],
     },
   ]
@@ -115,11 +120,11 @@ const Skills = () => {
 
         <div className="skills-cards-grid">
           {skillCategories.map((category, index) => (
-            <div 
-              key={category.id} 
+            <div
+              key={category.id}
               className="skill-category-card"
-              style={{ 
-                animationDelay: `${index * 0.2}s`
+              style={{
+                animationDelay: `${index * 0.2}s`,
               }}
             >
               <div className="card-header">
@@ -128,13 +133,13 @@ const Skills = () => {
                 </div>
                 <h3 className="category-title">{category.title}</h3>
               </div>
-              
+
               <ul className="skills-list-modern">
                 {category.skills.map((skill, skillIndex) => (
-                  <li 
-                    key={skillIndex} 
+                  <li
+                    key={skillIndex}
                     className="skill-item-modern"
-                    style={{ animationDelay: `${(index * 0.2) + (skillIndex * 0.05)}s` }}
+                    style={{ animationDelay: `${index * 0.2 + skillIndex * 0.05}s` }}
                   >
                     <div className="skill-bullet-round"></div>
                     <span className="skill-text-modern">{skill}</span>
@@ -154,7 +159,6 @@ const Skills = () => {
                   <img src={lang.logo || "/placeholder.svg"} alt={lang.name} />
                 </div>
                 <h4 className="language-name">{lang.name}</h4>
-                <div className="language-level">{lang.level}%</div>
               </div>
             ))}
           </div>

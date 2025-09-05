@@ -10,11 +10,11 @@ const Hero = () => {
               Bonjour, je suis <span className="highlight">Nandrasana Toky</span>
             </h1>
             <p className="hero-subtitle">
-              Professionnel en Systèmes et Réseaux, Développement Fullstack et DevOps
+              Aspirant Ingénieur IT
             </p>
             <p className="hero-description">
-              Je sécurise et administre les infrastructures IT avec une expertise en réseaux, 
-              systèmes et développement backend sécurisé.
+              Développeur Fullstack orienté backend, avec de solides compétences en DevOps. 
+              J’automatise, administre et sécurise les infrastructures grâce à mon expertise en systèmes et réseaux.
             </p>
             <div className="hero-buttons">
               <button 
