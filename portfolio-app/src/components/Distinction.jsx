@@ -346,7 +346,7 @@ const Distinctions = () => {
             {distinctions.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-indicator ${index === (currentSlide % distinctions.length) ? 'active' : ''}`}
+                className={`carousel-indicator-item ${index === (currentSlide % distinctions.length) ? 'active' : ''}`}
                 onClick={() => goToSlide(index)}
               />
             ))}

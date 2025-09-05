@@ -24,15 +24,21 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Education />
-      <Distinction />
-      <Contact />
-      <Footer />
+      <div className="min-h-screen bg-background-primary">
+        <Header />
+        <main className="relative">
+          <Hero />
+          <div className="container">
+            <Experience />
+            <Skills />
+            <Projects />
+            <Education />
+            <Distinction />
+            <Contact />
+          </div>
+        </main>
+        <Footer />
+      </div>
     </div>
   )
 }

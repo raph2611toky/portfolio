@@ -1,36 +1,62 @@
-import { useState } from 'react';
-import './Header.css';
+"use client"
+
+import { useState } from "react"
+import "./Header.css"
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" })
     }
-    setIsMenuOpen(false);
-  };
+    setIsMenuOpen(false)
+  }
 
   return (
     <header className="header">
-      <div className="header-container">
+      <div className="header-container container">
         <div className="logo">
-          <h2>Mon Portfolio</h2>
+          <h2 className="text-xl">Mon Portfolio</h2>
         </div>
-        
-        <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
+
+        <nav className={`nav ${isMenuOpen ? "nav-open" : ""}`}>
           <ul className="nav-list">
-            <li><button className='nav-item-button' onClick={() => scrollToSection('experience')}>Expérience</button></li>
-            <li><button className='nav-item-button' onClick={() => scrollToSection('skills')}>Compétences</button></li>
-            <li><button className='nav-item-button' onClick={() => scrollToSection('projects')}>Projets</button></li>
-            <li><button className='nav-item-button' onClick={() => scrollToSection('education')}>Formation</button></li>
-            <li><button className='nav-item-button' onClick={() => scrollToSection('distinction')}>Distinction</button></li>
-            <li><button className='nav-item-button' onClick={() => scrollToSection('contact')}>Contact</button></li>
+            <li>
+              <button className="nav-item-button" onClick={() => scrollToSection("experience")}>
+                Expérience
+              </button>
+            </li>
+            <li>
+              <button className="nav-item-button" onClick={() => scrollToSection("skills")}>
+                Compétences
+              </button>
+            </li>
+            <li>
+              <button className="nav-item-button" onClick={() => scrollToSection("projects")}>
+                Projets
+              </button>
+            </li>
+            <li>
+              <button className="nav-item-button" onClick={() => scrollToSection("education")}>
+                Études
+              </button>
+            </li>
+            <li>
+              <button className="nav-item-button" onClick={() => scrollToSection("distinction")}>
+                Distinction
+              </button>
+            </li>
+            <li>
+              <button className="nav-item-button" onClick={() => scrollToSection("contact")}>
+                Contact
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -41,7 +67,7 @@ const Header = () => {
         </button>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

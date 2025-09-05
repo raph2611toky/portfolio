@@ -112,37 +112,37 @@ const Skills = () => {
 
   return (
     <section className={`skills ${isVisible ? "animate-in" : ""}`} id="skills">
-      <div className="skills-container">
+      <div className="container">
         <div className="section-header fade-in-up">
           <h2 className="section-title">Mes Compétences</h2>
           <p className="section-subtitle">Expertise technique dans trois domaines clés</p>
         </div>
 
-        <div className="skills-cards-grid">
+        <div className="skills-grid">
           {skillCategories.map((category, index) => (
             <div
               key={category.id}
-              className="skill-category-card"
+              className="skill-card"
               style={{
                 animationDelay: `${index * 0.2}s`,
               }}
             >
-              <div className="card-header">
-                <div className="category-icon">
+              <div className="skill-card-header">
+                <div className="skill-icon">
                   <span>{category.icon}</span>
                 </div>
-                <h3 className="category-title">{category.title}</h3>
+                <h3 className="skill-title">{category.title}</h3>
               </div>
 
-              <ul className="skills-list-modern">
+              <ul className="skills-list">
                 {category.skills.map((skill, skillIndex) => (
                   <li
                     key={skillIndex}
-                    className="skill-item-modern"
+                    className="skill-item"
                     style={{ animationDelay: `${index * 0.2 + skillIndex * 0.05}s` }}
                   >
-                    <div className="skill-bullet-round"></div>
-                    <span className="skill-text-modern">{skill}</span>
+                    <div className="skill-bullet"></div>
+                    <span className="skill-text">{skill}</span>
                   </li>
                 ))}
               </ul>
@@ -150,11 +150,11 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="programming-languages zoom-in">
+        <div className="languages-section">
           <h3 className="languages-title">Langages de Programmation</h3>
           <div className="languages-grid">
             {programmingLanguages.map((lang, index) => (
-              <div key={index} className="language-item rotate-in" style={{ animationDelay: `${index * 0.15}s` }}>
+              <div key={index} className="language-card" style={{ animationDelay: `${index * 0.15}s` }}>
                 <div className="language-logo">
                   <img src={lang.logo || "/placeholder.svg"} alt={lang.name} />
                 </div>
